@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Gestor Financeiro Pessoal</h1>
+
+  <p class="intro">Use o formulário abaixo para adicionar movimentações rapidamente.</p>
+
+  <app-transaction-form (saved)="refresh()"></app-transaction-form>
+
+  <div class="summary-card">
+    <h3 class="page-title">Resumo</h3>
+    <div class="summary">
+      <div class="summary-item">
+        <h4>Saldo</h4>
+        <div class="amount">R$ {{ balance | number:'1.2-2' }}</div>
+      </div>
+      <div class="summary-item">
+        <h4>Total</h4>
+        <div class="amount">{{ transactions.length }} transações</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<h2 class="page-title">📋 Lista de Movimentos</h2>
+
+<div *ngIf="error" class="error">
+  {{ error }}
+  <button (click)="load()">Tentar novamente</button>
+</div>
+
+<div class="list-card">
+  <table *ngIf="!error">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Categoria</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Tipo</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngIf="movimentos.length === 0">
+      <td colspan="6">Nenhum movimento encontrado.</td>
+    </tr>
+    <tr *ngFor="let item of movimentos">
+      <td>{{ item.date | date:'dd/MM/yyyy' }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.description }}</td>
+      <td [class.income]="item.type==='income'" [class.expense]="item.type==='expense'">{{ item.type === 'income' ? '+' : '-' }} R$ {{ item.amount | number:'1.2-2' }}</td>
+      <td>{{ item.type === 'income' ? 'Receita' : 'Despesa' }}</td>
+      <td>
+        <button (click)="remove(item._id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+<div *ngIf="!loading && !error && movimentos.length === 0">Nenhum movimento encontrado.</div>

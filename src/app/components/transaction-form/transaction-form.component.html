@@ -1,0 +1,16 @@
+<form (ngSubmit)="submit()">
+  <select [(ngModel)]="model.type" name="type" required>
+    <option value="income">Receita</option>
+    <option value="expense">Despesa</option>
+  </select>
+
+  <input type="text" name="category" placeholder="Categoria" [(ngModel)]="model.category" required>
+
+  <input type="number" name="amount" step="0.01" placeholder="Valor" [(ngModel)]="model.amount" required>
+
+  <input type="date" name="date" [(ngModel)]="model.date" required>
+
+  <input type="text" name="description" placeholder="Descrição (opcional)" [(ngModel)]="model.description">
+
+  <button type="submit">Adicionar</button>
+</form>

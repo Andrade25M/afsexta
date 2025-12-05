@@ -1,0 +1,109 @@
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Center header and style */
+h1 {
+  text-align: center;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #0B5FFF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #e0eaff, #f0f7ff);
+  color: #08306b;
+  border: 1px solid #cfe0ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(11, 95, 255, 0.12);
+}
+
+/* active nav link */
+.active {
+  background: linear-gradient(90deg, #d6e6ff, #c9ddff);
+  border-color: #acc4ff;
+}
+
+/* tidy the header */
+h1 {
+  font-size: 2.2rem;
+  text-shadow: 0 1px 2px rgba(11, 95, 255, 0.1);
+}
+
+/* Welcome card on homepage */
+.welcome-card {
+  max-width: 720px;
+  margin: 0 auto 16px auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fafcff;
+  border: 1px solid #e8f0ff;
+  text-align: center;
+}
+
+/* Page titles for Lista and Cadastro */
+.page-title {
+  text-align: center;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size: 1.6rem;
+  margin: 12px 0 18px 0;
+  color: #0B5FFF;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block;
+  background: linear-gradient(90deg, #fff, #f4f9ff);
+  border: 1px solid #e5f0ff;
+}
+
+.list-card {
+  max-width: 960px;
+  margin: 0 auto 16px auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #eef6ff;
+  box-shadow: 0 2px 6px rgba(9, 30, 66, 0.04);
+}
+
+.cadastro-form {
+  max-width: 720px;
+  margin: 0 auto 16px auto;
+}
+
+.summary-card {
+  max-width: 960px;
+  margin: 12px auto 24px auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border: 1px solid #e6f1ff;
+}
+.summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.summary-item { text-align: center; }
+.summary-item .amount { font-size: 1.4rem; font-weight: 700; }
+.small-table { width: 100%; border-collapse: collapse; }
+.small-table th, .small-table td { padding: 8px; border-bottom: 1px solid #eee; }
+.more { text-align: center; margin-top: 8px; }
